@@ -1,0 +1,16 @@
+[Metadata]
+name = "hello-cat"
+version = "1.2.0"
+author = "Meower Dev Team"
+
+[Description]
+This is a sample package for Catman.
+It installs a simple "hello world" script.
+Great for testing installs and prompts.
+
+[DispatchAction ::setup]
+buildcfg = "https://raw.githubusercontent.com/notmeower77463955/catman-files/refs/heads/main/packages/hello-cat/hello-cat.cat"
+install = "https://raw.githubusercontent.com/notmeower77463955/catman-files/refs/heads/main/packages/hello-cat/hello-cat.sh"
+
+[DispatchAction ::delete]
+execv = "rm -f /usr/local/bin/hello-cat && echo 'hello-cat removed'"
